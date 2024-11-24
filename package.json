@@ -1,0 +1,26 @@
+{
+  "name": "lootforcastnew",
+  "version": "1.0.0",
+  "description": "\"Shopping app\"",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuhaniKapasiya/lootforcastnew.git"
+  },
+  "keywords": [
+    "\"shopping\""
+  ],
+  "author": "\"shoping\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuhaniKapasiya/lootforcastnew/issues"
+  },
+  "homepage": "https://github.com/SuhaniKapasiya/lootforcastnew#readme",
+  "devDependencies": {
+    "parcel": "^2.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  }
+}
