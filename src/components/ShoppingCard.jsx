@@ -30,11 +30,15 @@ const ShoppingCard = ({ products }) => {
         <span
           data-tooltip-id="name-tooltip"
           data-tooltip-content={name}
-          className="cursor-pointer"
+          className="cursor-pointer w-32"
         >
           {truncatedName}
           {name.length > 32 && <span className="text-blue ">read more</span>}
-          <Tooltip id="name-tooltip" place="top" />
+          <Tooltip
+            id="name-tooltip"
+            place="top"
+            className="bg-black text-white p-2 rounded-md w-40 h-10 "
+          />
         </span>
 
         <div className="flex py-2 justify-between">
