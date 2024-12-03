@@ -21,8 +21,10 @@ const Home = () => {
     setitem(json.products);
   };
 
-  return item.length === 0 ?<Shimmer/>: (
-    <div className="flex flex-wrap">
+  return item.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <div className="flex flex-wrap bg-slate-400 p-2 ">
       {item.map((products) => (
         <ShoppingCard key={products._id} products={products} />
       ))}
