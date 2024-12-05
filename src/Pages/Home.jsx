@@ -24,7 +24,7 @@ const Home = () => {
   return item.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="flex flex-wrap bg-slate-400 p-2 ">
+    <div className="flex flex-wrap bg-slate-200 p-2 ">
       {item.map((products) => (
         <ShoppingCard key={products._id} products={products} />
       ))}

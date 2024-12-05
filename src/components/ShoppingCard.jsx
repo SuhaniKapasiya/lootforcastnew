@@ -23,9 +23,13 @@ const ShoppingCard = ({ products }) => {
   };
 
   return (
-    <div className="bg-slate-100 w-[200px] h-auto m-2 mt-3 rounded-lg shadow-md">
+    <div className="bg-slate-300 w-[200px] h-auto m-2 mt-3 rounded-lg shadow-md">
       <div className="items-center p-2">
-        <img className="w-44  p-4 px-5 " src={image} />
+
+        <div className="absolute">
+          <button className="px-2 py-2 bg-slate-400 text-white  rounded-md">Add+</button>
+        </div>
+        <img className="w-442 h-52 p-4 px-5 " src={image} />
 
         <span
           data-tooltip-id="name-tooltip"

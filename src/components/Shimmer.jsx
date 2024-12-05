@@ -8,7 +8,7 @@ const Shimmer = () => {
         .map((_, index) => (
           <div
             key={index}
-            className="w-48 p-4 bg-gray-200 rounded-lg animate-pulse"
+            className=" w-48 p-4 bg-gray-200 rounded-lg animate-pulse"
           >
             {/* Image Placeholder */}
             <div className="h-28 bg-gray-300 rounded-lg"></div>
