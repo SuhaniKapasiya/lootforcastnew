@@ -16,7 +16,7 @@ const Home = () => {
 
     const json = await respone.json();
 
-    console.log("json------------------>", json);
+    // console.log("json------------------>", json);
 
     setitem(json.products);
   };
@@ -24,7 +24,7 @@ const Home = () => {
   return item.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="flex flex-wrap bg-slate-200 p-2 ">
+    <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 bg-slate-200 p-2 ">
       {item.map((products) => (
         <ShoppingCard key={products._id} products={products} />
       ))}

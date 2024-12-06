@@ -1,35 +1,38 @@
+import { useDispatch } from "react-redux";
 import { Tooltip } from "react-tooltip";
+import { addItem } from "../utils/cartSlice";
+import useColorForStore from "../utils/useColorForStore"; 
+import { useState } from "react";
+
 const ShoppingCard = ({ products }) => {
-  const { image, name, price, discount_percentage, store_name, mrp, link } =
-    products;
+
+
+ const [tooltipVisible, setTooltipVisible] = useState(false); 
+    const { getColorForStore } = useColorForStore(); 
+    const dispatch = useDispatch();
+    const { image, name, price, discount_percentage, store_name, mrp, link } =
+     products;
+
+   const  handleAddItem = (products)=>{
+
+      dispatch(addItem(products));
+   }
 
   const truncatedName = name.length > 32 ? `${name.slice(0, 32)}...` : name;
-  const getColorForStore = (storeName) => {
-    switch (storeName) {
-      case "Myntra":
-        return "text-[#F13AB1]";
-      case "Flipkart":
-        return "text-[#047BD5]";
-      case "Amazon":
-        return "text-[#FF9900]";
-      case "Ajio":
-        return "text-[#496379]";
-      // case "Boat":
-      //   return "text-[#F13AB1]";
-      // Add more cases for other stores as needed
-      default:
-        return "text-gray-800";
-    }
-  };
+
 
   return (
     <div className="bg-slate-300 w-[200px] h-auto m-2 mt-3 rounded-lg shadow-md">
       <div className="items-center p-2">
-
         <div className="absolute">
-          <button className="px-2 py-2 bg-slate-400 text-white  rounded-md">Add+</button>
+          <button
+            className="px-2 py-2 bg-slate-400 text-white  rounded-md cursor-pointer"
+            onClick={() => handleAddItem(products)}
+          >
+            Add+
+          </button>
         </div>
-        <img className="w-442 h-52 p-4 px-5 " src={image} />
+        <img className="w-[442px] h-52 p-4 px-5 " src={image} />
 
         <span
           data-tooltip-id="name-tooltip"

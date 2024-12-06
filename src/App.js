@@ -5,6 +5,8 @@ import ReactDOM from "react-dom/client";
 import Home from "./Pages/Home";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore"
 /**
  * 
   Navbar
@@ -20,13 +22,17 @@ import Header from "./components/Header";
  */
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-slate-300">
+      <Provider store={appStore}>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </div>
   );
 };
 
