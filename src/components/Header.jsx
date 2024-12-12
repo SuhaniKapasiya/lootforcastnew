@@ -28,6 +28,10 @@ const Header = () => {
             <div className="text-gray-800 underline font-bold"> Home </div>
           </Link>
 
+          <Link to="/aboutus">
+            <div className="text-gray-800 underline font-bold ml-6"> About us </div>
+          </Link>
+
           <div className="relative ml-5">
             <Link to="/cart">
               <IoCartOutline className="text-3xl text-white mt-2 mr-1" />

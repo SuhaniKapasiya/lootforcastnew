@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore"
+import AboutUs from "./components/AboutUs";
 /**
  * 
   Navbar
@@ -29,6 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="aaboutus" element={<AboutUs />} />
           </Routes>
         </BrowserRouter>
       </Provider>
