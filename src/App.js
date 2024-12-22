@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore"
 import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
 /**
  * 
   Navbar
@@ -23,14 +24,17 @@ import AboutUs from "./components/AboutUs";
  */
 const App = () => {
   return (
-    <div className="bg-slate-300">
+    <div className="bg-slate-300 h-screen">
       <Provider store={appStore}>
         <BrowserRouter>
           <Header />
           <Routes>
+            
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="aaboutus" element={<AboutUs />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contactus" element={<ContactUs/>} />
+
           </Routes>
         </BrowserRouter>
       </Provider>

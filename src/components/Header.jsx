@@ -29,7 +29,17 @@ const Header = () => {
           </Link>
 
           <Link to="/aboutus">
-            <div className="text-gray-800 underline font-bold ml-6"> About us </div>
+            <div className="text-gray-800 underline font-bold ml-6">
+              {" "}
+              About us{" "}
+            </div>
+          </Link>
+
+          <Link to="/contactus">
+            <div className="text-gray-800 underline font-bold ml-6">
+              {" "}
+              Contact us{" "}
+            </div>
           </Link>
 
           <div className="relative ml-5">
